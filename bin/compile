@@ -65,7 +65,7 @@ rm -rf $BUILD_DIR/public_html > /dev/null
 mkdir $BUILD_DIR/public_html
 mkdocs build -c -d $BUILD_DIR/public_html -f $CONFIG_FILE | indent
 
-echo "{ \"root\": \"$BUILD_DIR/public_html\" }" > $BUILD_DIR/static.json
+echo "{ \"root\": \"public_html\" }" > $BUILD_DIR/static.json
 
 puts-step "Wrote cofig JSON to $BUILD_DIR/static.json"
 cat $BUILD_DIR/static.json
