@@ -16,7 +16,7 @@ rm -fr $CACHE_DIR
 mkdir -p $CACHE_DIR
 
 # Versions.
-PYTHON_VERSION="python-3.7.7"
+PYTHON_VERSION="python-3.6.5"
 PYTHON_STACK="cedar-14"
 PCRE_VERSION='pcre-8.36'
 source $BIN_DIR/utils
