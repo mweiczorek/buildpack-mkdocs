@@ -47,7 +47,7 @@ python -m ensurepip --upgrade | indent
 cd $BUILD_DIR
 
 puts-step "Installing MkDocs"
-python -m pip install mkdocs==1.0.4 | indent
+python -m pip install mkdocs | indent
 
 puts-step "Installing MkDocs Material"
 python -m pip install mkdocs-material==4.4.3
