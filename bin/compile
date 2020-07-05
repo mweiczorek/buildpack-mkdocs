@@ -16,7 +16,7 @@ rm -fr $CACHE_DIR
 mkdir -p $CACHE_DIR
 
 # Versions.
-PYTHON_VERSION="python-3.5.2"
+PYTHON_VERSION="python-3.8.3"
 PYTHON_STACK="cedar-14"
 PCRE_VERSION='pcre-8.36'
 source $BIN_DIR/utils
@@ -47,7 +47,7 @@ python -m ensurepip --upgrade | indent
 cd $BUILD_DIR
 
 puts-step "Installing MkDocs"
-python -m pip install --quiet mkdocs | indent
+python -m pip install mkdocs | indent
 
 puts-step "Running MkDocs"
 
@@ -58,4 +58,5 @@ else
   exit 1
 fi
 
-mkdocs build -c -d $BUILD_DIR/public -f $CONFIG_FILE | indent
+mkdir $BUILD_DIR/public_html
+mkdocs build -c -d $BUILD_DIR/public_html -f $CONFIG_FILE | indent
