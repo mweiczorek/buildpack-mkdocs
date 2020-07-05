@@ -67,5 +67,5 @@ mkdocs build -c -d $BUILD_DIR/public_html -f $CONFIG_FILE | indent
 
 echo "{ \"root\": \"$BUILD_DIR/public_html\" }" > $ROOT_DIR/static.json
 
-puts-step "Wrote cofig JSON to $ROOT_DIR/static.json"
-cat $ROOT_DIR/static.json
+puts-step "Wrote cofig JSON to $BUILD_DIR/static.json"
+cat $BUILD_DIR/static.json
