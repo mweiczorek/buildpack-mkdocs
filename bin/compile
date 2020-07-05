@@ -44,6 +44,9 @@ export_env_dir $ENV_DIR
 puts-step "Ensure pip"
 python -m ensurepip --upgrade | indent
 
+puts-step "Installing OpenSSL"
+python -m pip install openssl | indent
+
 cd $BUILD_DIR
 
 puts-step "Installing MkDocs"
